@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diddy Game</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #121318;
+      --text: #e6e6e6;
+      --muted: #9aa0a6;
+      --accent: #4f46e5;
+      --accent-2: #22c55e;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 50% -10%, #1c1f2b 0%, var(--bg) 60%);
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+      display: block;
+      margin: 0 auto 18px;
+      object-fit: cover;
+      background: #0f1117;
+    }
+
+    h1 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 10px 0 8px;
+      letter-spacing: 0.3px;
+    }
+
+    p.desc {
+      margin: 0 0 22px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: grid;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease;
+      box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+    }
+
+    .btn:focus {
+      outline: 3px solid rgba(79, 70, 229, 0.35);
+      outline-offset: 3px;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+
+    .hint { color: var(--muted); font-size: 12px; margin-top: 12px; }
+
+    footer { text-align: center; margin-top: 28px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card" aria-labelledby="title">
+      <!-- Place your attached Diddy image as favicon.ico next to this HTML file -->
+      <img class="logo" src="favicon.ico" alt="Diddy" />
+      <h1 id="title">Diddy Game</h1>
+      <p class="desc">Tap the button to launch the Diddy Game in your browser.</p>
+      <div class="actions">
+        <a class="btn" href="https://ashton20271.github.io/diddygame/" aria-label="Open Diddy Game">🎮 Diddy Game</a>
+      </div>
+      <footer>
+        <span class="hint">Tip: keep <code>favicon.ico</code> in the same folder as this file so the image shows up.</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
